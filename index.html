@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Weather App</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="logo">
+            <img src="assets/app_logo.png" alt="Logo" />
+            MyWeather
+        </div>
+
+        <div class="hamburger" onclick="toggleMenu()">
+            <img src="assets/hamburger.svg" alt="Menu" width="28" height="28" />
+        </div>
+
+        <ul class="nav-links" id="navLinks">
+            <li><a href="about/about.html">About</a></li>
+            <li><a href="index.html">Home</a></li>
+            <!-- <li><a href="comeingsoon.html">Forecast</a></li>
+            <li><a href="comeingsoon.html">Maps</a></li> -->
+        </ul>
+    </nav>
+
+
+    <div class="header">
+        <img class="wimg" src="assets/weather.webp" alt="Weather Background" />
+
+
+        <div class="overlay-content">
+            <input type="text" id="cityInput" placeholder="Enter City Name" />
+            <div class="btns">
+                <button onclick="getWeatherByCity()">Search</button>
+                <button onclick="getWeatherByLocation()">Use My Location</button>
+            </div>
+        </div>
+    </div>
+
+    <div id="weatherInfo" class="weather-info-container"></div>
+
+    <section class="hero-subtitle">
+        <h3>🌍 Get Real-Time Weather Updates Instantly!</h3>
+        <p>Stay updated with temperature, wind, humidity, and more. Accurate, fast, and cool 😎</p>
+    </section>
+
+    <section class="weather-tips-section">
+        <h3>🧠 Smart Weather Tip</h3>
+        <p id="tipMessage">Analyzing weather...</p>
+    </section>
+
+    <section class="india-cities">
+        <h3>🏙️ Major Indian Cities Weather</h3>
+        <div class="city-boxes">
+            <div class="city" data-city="Delhi">🏰 Delhi<br><span class="temp">--°C</span></div>
+            <div class="city" data-city="Mumbai">🌊 Mumbai<br><span class="temp">--°C</span></div>
+            <div class="city" data-city="Bangalore">🏞️ Bangalore<br><span class="temp">--°C</span></div>
+            <div class="city" data-city="Chennai">🌴 Chennai<br><span class="temp">--°C</span></div>
+            <div class="city" data-city="Pune">🏔️ Pune<br><span class="temp">--°C</span></div>
+            <div class="city" data-city="Jaipur">🏜️ Jaipur<br><span class="temp">--°C</span></div>
+        </div>
+    </section>
+
+
+
+    <footer class="footer">
+        <p>🛠️ Built by <strong>Krish Modh</strong> | 💻 Weather API by OpenWeatherMap</p>
+        <p>⚡ Frontend + JS powered</p>
+    </footer>
+
+
+    <script src="script.js"></script>
+</body>
+
+</html>
