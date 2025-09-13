@@ -6,9 +6,7 @@ A **responsive weather forecasting web application** that allows users to **sear
 ## 📸 Preview  
 | Dashboard | Forecast Page | Admin Panel |
 |-----------|---------------|-------------|
-|<img width="2560" height="1440" alt="Screenshot (249)" src="https://github.com/user-attachments/assets/8e3d4912-fc3a-4836-b309-c74c851f358c" />
- |<img width="2560" height="1440" alt="Screenshot (251)" src="https://github.com/user-attachments/assets/4a68a276-c48e-4a1d-b5de-90394cc46bc3" />
- |<img width="2560" height="1440" alt="Screenshot (257)" src="https://github.com/user-attachments/assets/e34987c0-ee40-469b-9390-1941fb75574a" />
+|<img width="2560" height="1440" alt="Screenshot (249)" src="https://github.com/user-attachments/assets/8e3d4912-fc3a-4836-b309-c74c851f358c" />|<img width="2560" height="1440" alt="Screenshot (251)" src="https://github.com/user-attachments/assets/4a68a276-c48e-4a1d-b5de-90394cc46bc3" />|<img width="2560" height="1440" alt="Screenshot (257)" src="https://github.com/user-attachments/assets/e34987c0-ee40-469b-9390-1941fb75574a" />
 
 ---
 
