@@ -1,0 +1,416 @@
+/* ================== Base ================== */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9fafc;
+    /* soft light background */
+    color: #222;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* ================== Navbar ================== */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background: linear-gradient(90deg, #89f7fe, #66a6ff);
+    /* light cyan-blue */
+    color: #222;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav .center a {
+    margin: 0 15px;
+    font-weight: 600;
+    color: #222;
+    transition: color 0.2s;
+}
+
+nav .center a:hover {
+    color: #0056b3;
+}
+
+nav .right {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+#themeToggle {
+    padding: 6px 14px;
+    border-radius: 20px;
+    background: #fff;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== Forms ================== */
+.wea {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+    margin: 30px 0;
+    justify-content: center;
+}
+
+#city {
+    padding: 12px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    width: 220px;
+    background: #fff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+form button,
+.bt1 {
+    padding: 12px 22px;
+    border-radius: 8px;
+    border: none;
+    cursor: pointer;
+    background: linear-gradient(90deg, #89f7fe, #66a6ff);
+    color: #222;
+    font-weight: bold;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.2s, opacity 0.2s;
+}
+
+form button:hover,
+.bt1:hover {
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* ================== Weather Result ================== */
+.weather-result {
+    margin: 20px auto;
+    max-width: 500px;
+    background: #ffffff;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    font-size: 18px;
+    color: #333;
+}
+
+/* ================== Quotes ================== */
+.quotes-section {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.08);
+    font-style: italic;
+    text-align: center;
+    color: #444;
+}
+
+/* ================== Active Cities ================== */
+.active-cities {
+    margin-top: 40px;
+    text-align: center;
+}
+
+.active-cities h3 {
+    font-size: 22px;
+    margin-bottom: 20px;
+    color: #444;
+}
+
+.cities-weather-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    justify-content: center;
+}
+
+.city-card {
+    width: 200px;
+    padding: 20px;
+    border-radius: 18px;
+    text-align: center;
+    color: #fff;
+    font-weight: 500;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s, box-shadow 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Gradient backgrounds for variety */
+.city-card:nth-child(1) {
+    background: linear-gradient(135deg, #667eea, #764ba2);
+    /* blue-purple */
+}
+
+.city-card:nth-child(2) {
+    background: linear-gradient(135deg, #f7971e, #ffd200);
+    /* orange-yellow */
+}
+
+.city-card:nth-child(3) {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    /* sky blue */
+}
+
+.city-card:nth-child(4) {
+    background: linear-gradient(135deg, #43e97b, #38f9d7);
+    /* green-cyan */
+}
+
+.city-card:nth-child(5) {
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+    /* pink-red */
+}
+
+.city-card:hover {
+    transform: translateY(-6px) scale(1.05);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+}
+
+/* Weather Icon */
+.city-icon {
+    font-size: 40px;
+    margin-bottom: 10px;
+}
+
+/* City Name */
+.city-name {
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 6px;
+}
+
+/* Temp + Condition */
+.city-temp {
+    font-size: 18px;
+    margin-bottom: 4px;
+}
+
+.city-condition {
+    font-size: 14px;
+    opacity: 0.9;
+}
+
+
+/* ================== Dark Mode ================== */
+body.dark {
+    background: #121212;
+    color: #e5e5e5;
+}
+
+body.dark nav {
+    background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+    color: #e5e5e5;
+    box-shadow: none;
+}
+
+body.dark nav .center a {
+    color: #e5e5e5;
+}
+
+body.dark nav .center a:hover {
+    color: #66c0f4;
+}
+
+body.dark #city {
+    background: #1e1e1e;
+    color: #eee;
+    box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark form button,
+body.dark .bt1 {
+    background: linear-gradient(90deg, #66c0f4, #89f7fe);
+    color: #111;
+}
+
+body.dark .weather-result,
+body.dark .quotes-section,
+body.dark .city-card {
+    background: #1e1e1e;
+    color: #eee;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* clock */
+#clockContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+}
+
+#clock {
+    font-size: 2rem;
+    font-weight: bold;
+    padding: 20px 40px;
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(10px);
+    color: #111;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease-in-out;
+    width: 98%;
+    text-align: center;
+}
+
+body.dark #clock {
+    color: #f5f5f5;
+    background: rgba(30, 30, 30, 0.4);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* hourly update */
+.hourly-weather {
+    margin-top: 30px;
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+body.dark .hourly-weather {
+    background: #1e1e1e;
+    color: #f5f5f5;
+}
+
+.high-low {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.hourly-grid {
+    display: flex;
+    overflow-x: auto;
+    gap: 15px;
+    padding-bottom: 10px;
+}
+
+.hour-card {
+    min-width: 100px;
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    padding: 10px;
+    text-align: center;
+    backdrop-filter: blur(8px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+    transition: transform 0.2s;
+}
+
+.hour-card:hover {
+    transform: translateY(-5px);
+}
+
+body.dark .hour-card {
+    background: rgba(30, 30, 30, 0.4);
+    color: #fff;
+}
+
+/* Footer */
+footer {
+    background: linear-gradient(90deg, #89f7fe, #66a6ff);
+    color: #222;
+    padding: 40px 20px 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    transition: background 0.3s, color 0.3s;
+}
+
+.footer-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 30px;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+    flex: 1;
+    min-width: 220px;
+}
+
+.footer-left h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+.footer-center ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-center ul li {
+    margin: 8px 0;
+}
+
+.footer-center ul li a {
+    text-decoration: none;
+    color: #222;
+    transition: color 0.2s;
+}
+
+.footer-center ul li a:hover {
+    color: #0056b3;
+}
+
+.footer-right .social-icons {
+    display: flex;
+    gap: 12px;
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.footer-right .social-icons a {
+    font-size: 1.5rem;
+    text-decoration: none;
+    color: #222;
+    transition: transform 0.2s, color 0.2s;
+}
+
+.footer-right .social-icons a:hover {
+    transform: scale(1.2);
+    color: #0056b3;
+}
+
+.footer-bottom {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 0.9rem;
+    color: #111;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 10px;
+}
+
+/* Dark Mode */
+body.dark footer {
+    background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+    color: #e5e5e5;
+}
+
+body.dark .footer-center ul li a,
+body.dark .footer-right .social-icons a {
+    color: #e5e5e5;
+}
+
+body.dark .footer-center ul li a:hover,
+body.dark .footer-right .social-icons a:hover {
+    color: #66c0f4;
+}
+
+body.dark .footer-bottom {
+    color: #aaa;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}

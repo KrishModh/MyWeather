@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>About | Weather App</title>
+    <link rel="stylesheet" href="../../static/about.css">
+    <link rel="stylesheet" href="../../static/dashboard.css">
+</head>
+
+<body class="light">
+    <nav>
+        <div class="left">🌤 Weather App</div>
+        <div class="center">
+            <a href="/dashboard">Home</a>
+            <a href="/forecast">Forecast</a>
+            <a href="/about" class="active">About</a>
+            <a href="/contact">Contact</a>
+        </div>
+        <div class="right">
+            <span>Hi, {{ user }}</span> |
+            <a href="/logout">Logout</a>
+            <button id="themeToggle">🌙</button>
+        </div>
+    </nav>
+
+    <br>
+
+    <header class="about-header">
+        <h1>About Weather App</h1>
+        <p>Your reliable companion for accurate weather updates worldwide.</p>
+    </header>
+
+    <main class="about-main">
+        <section class="about-section">
+            <h2>🌎 Our Mission</h2>
+            <p>
+                Weather App was built to provide users with <strong>real-time weather data</strong>,
+                detailed forecasts, and interactive tools—all wrapped in a modern, user-friendly
+                interface. Whether you're planning a trip, checking local conditions, or tracking
+                severe weather, we’ve got you covered.
+            </p>
+        </section>
+
+        <section class="about-section">
+            <h2>⚡ Features</h2>
+            <ul>
+                <li>Live weather updates using OpenWeather API</li>
+                <li>7-day and hourly forecasts with interactive visuals</li>
+                <li>Light/Dark mode for a personalized experience</li>
+                <li>Save favorite locations for quick access</li>
+                <li>Responsive design that works on all devices</li>
+            </ul>
+        </section>
+
+        <section class="about-section">
+            <h2>💡 Technology Stack</h2>
+            <p>
+                Built using <strong>Flask</strong> for the backend, <strong>Oracle Database</strong> for
+                secure storage, and modern <strong>HTML, CSS, and JavaScript</strong> for a smooth and
+                responsive frontend experience.
+            </p>
+        </section>
+
+        <section class="about-section team">
+            <h2>👨‍💻 Meet the Developer</h2>
+            <div class="team-card">
+                <!-- <img src="../../static/logo.png" alt="Krish Modh"> -->
+                <h3>Krish Modh</h3>
+                <p>
+                    A passionate B.Tech CSE student and web developer who loves creating
+                    impactful projects. Skilled in HTML, CSS, JavaScript, Java, Python, and database
+                    management. Dedicated to making technology accessible and useful for everyone.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-left">
+                <h3>🌤 Weather App</h3>
+                <p>Get real-time weather updates, forecasts, and climate info worldwide.</p>
+            </div>
+            <div class="footer-center">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="/dashboard">Home</a></li>
+                    <li><a href="/forecast">Forecast</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-right">
+                <h4>Follow Us</h4>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/krish-modh-b38447300">LinkedIn</a>
+                    <a href="https://www.instagram.com/krish._.life?igsh=eTBycmJ5NmIyd3Y0">Instagram</a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Weather App. All rights reserved.
+        </div>
+    </footer>
+
+    <script>
+
+        // Theme Toggle
+        const themeBtn = document.getElementById("themeToggle");
+        themeBtn.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            if (document.body.classList.contains("dark")) {
+                themeBtn.innerText = "☀️";
+            } else {
+                themeBtn.innerText = "🌙";
+            }
+        });
+
+    </script>
+</body>
+
+</html>

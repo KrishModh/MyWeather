@@ -1,0 +1,478 @@
+/* ================== Base ================== */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #f9fafc;
+  color: #222;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* ================== Navbar ================== */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: linear-gradient(90deg, #89f7fe, #66a6ff);
+  color: #222;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+}
+
+nav .center a {
+  margin: 0 15px;
+  font-weight: 600;
+  color: #222;
+  transition: color 0.2s;
+}
+
+nav .center a:hover {
+  color: #0056b3;
+}
+
+nav .center .active {
+  border-bottom: 2px solid #0056b3;
+  padding-bottom: 3px;
+}
+
+nav .right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+#themeToggle {
+  padding: 6px 14px;
+  border-radius: 20px;
+  background: #fff;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* ================== Forms ================== */
+.wea {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  margin: 30px 0;
+  justify-content: center;
+}
+
+#forecastCity {
+  padding: 12px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  width: 220px;
+  background: #fff;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+}
+
+form button,
+.bt1 {
+  padding: 12px 22px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  background: linear-gradient(90deg, #89f7fe, #66a6ff);
+  color: #222;
+  font-weight: bold;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.15);
+  transition: transform 0.2s, opacity 0.2s;
+}
+
+form button:hover,
+.bt1:hover {
+  transform: translateY(-2px);
+  opacity: 0.9;
+}
+
+/* ================== Current Weather ================== */
+.weather-result {
+  margin: 20px auto;
+  max-width: 500px;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-size: 18px;
+  color: #333;
+}
+
+/* ================== Hourly Forecast ================== */
+#hourlyForecast {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#hourlyForecast h3 {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+#hourlyContainer {
+  display: flex;
+  justify-content: center;
+  overflow-x: auto;
+  gap: 15px;
+  padding-bottom: 10px;
+}
+
+#hourlyContainer>* {
+  width: 10vw;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+.hour-card:hover {
+  transform: translateY(-5px);
+}
+
+/* Extra details */
+#extraDetails {
+  display: flex;
+  gap: 15px;
+  margin-top: 15px;
+  justify-content: center;
+}
+
+#extraDetails div {
+  padding: 10px;
+  border-radius: 10px;
+  background: #f3f3f3;
+  text-align: center;
+  min-width: 80px;
+}
+
+/* ================== 7-Day Forecast ================== */
+.hourly-weather {
+  margin-top: 30px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  width: 95vw;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#forecastTitle {
+  text-align: center;
+  color: #444;
+  margin-bottom: 20px;
+}
+
+.hourly-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.day-card {
+  width: 140px;
+  padding: 15px;
+  border-radius: 12px;
+  text-align: center;
+  background: linear-gradient(135deg, #89f7fe, #66a6ff);
+  color: #222;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.day-card:hover {
+  transform: translateY(-6px) scale(1.05);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+}
+
+/* ================== Footer ================== */
+footer {
+  background: linear-gradient(90deg, #89f7fe, #66a6ff);
+  color: #222;
+  padding: 40px 20px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  transition: background 0.3s, color 0.3s;
+}
+
+.footer-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.footer-left,
+.footer-center,
+.footer-right {
+  flex: 1;
+  min-width: 220px;
+}
+
+.footer-center ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-center ul li {
+  margin: 8px 0;
+}
+
+.footer-center ul li a {
+  text-decoration: none;
+  color: #222;
+  transition: color 0.2s;
+}
+
+.footer-center ul li a:hover {
+  color: #0056b3;
+}
+
+.footer-right .social-icons {
+  display: flex;
+  gap: 12px;
+  margin-top: 10px;
+  flex-direction: column;
+}
+
+.footer-right .social-icons a {
+  font-size: 1.5rem;
+  text-decoration: none;
+  color: #222;
+  transition: transform 0.2s, color 0.2s;
+}
+
+.footer-right .social-icons a:hover {
+  transform: scale(1.2);
+  color: #0056b3;
+}
+
+.footer-bottom {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 0.9rem;
+  color: #111;
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
+  padding-top: 10px;
+}
+
+/* ================== Dark Mode ================== */
+body.dark {
+  background: #121212;
+  color: #e5e5e5;
+}
+
+body.dark nav {
+  background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+  color: #e5e5e5;
+}
+
+body.dark nav .center a {
+  color: #e5e5e5;
+}
+
+body.dark nav .center a:hover {
+  color: #66c0f4;
+}
+
+body.dark #forecastCity {
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 3px 8px rgba(255, 255, 255, 0.05);
+}
+
+body.dark form button,
+body.dark .bt1 {
+  background: linear-gradient(90deg, #66c0f4, #89f7fe);
+  color: #111;
+}
+
+body.dark .weather-result,
+body.dark #hourlyForecast,
+body.dark .hourly-weather {
+  background: #1e1e1e;
+  color: #eee;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark #extraDetails div {
+  background: #2a2a2a;
+}
+
+body.dark footer {
+  background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+  color: #e5e5e5;
+}
+
+body.dark .footer-center ul li a,
+body.dark .footer-right .social-icons a {
+  color: #e5e5e5;
+}
+
+body.dark .footer-center ul li a:hover,
+body.dark .footer-right .social-icons a:hover {
+  color: #66c0f4;
+}
+
+body.dark .footer-bottom {
+  color: #aaa;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Hourly Cards ===== */
+#hourlyContainer .hour-card {
+  background: #fdfdfd;
+  border-radius: 16px;
+  padding: 14px 10px;
+  min-width: 90px;
+  text-align: center;
+  font-weight: 500;
+  color: #444;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+#hourlyContainer .hour-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+#hourlyContainer .hour-card img {
+  width: 40px;
+  height: 40px;
+  margin: 5px 0;
+}
+
+/* ===== Extra Info Section ===== */
+#extraInfo {
+  margin-top: 18px;
+  background: #fff;
+  border-radius: 14px;
+  padding: 16px;
+  box-shadow: 0 3px 12px rgba(0, 0, 0, 0.05);
+  display: grid;
+  gap: 6px;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+}
+
+#extraInfo > * {
+  background: #fdfdfd;
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+  color: #444;
+  font-weight: 500;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  font-size: 17px;
+  cursor: pointer;
+  gap: 18px;
+  width: 11vw;
+}
+
+#extraInfo > *:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Highlight sunrise/sunset with icons inline */
+#extraInfo div:first-child span {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 8px;
+}
+
+/* ===== 7-Day Cards ===== */
+#forecastGrid .hour-card {
+  width: 10vw;
+  background: rgb(255, 255, 255);
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+  backdrop-filter: blur(8px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+  cursor: pointer;
+}
+
+#forecastGrid .hour-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+}
+
+/* Typography for better readability */
+#hourlyForecast h3,
+#forecastTitle,#extraInfo {
+  font-size: 1.6rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  letter-spacing: 0.5px;
+  color: #222;
+}
+
+/* ===== Perfect Dark Mode Enhancements ===== */
+body.dark #hourlyContainer .hour-card,
+body.dark #forecastGrid .hour-card {
+  background: #1f1f1f;
+  color: #e5e5e5;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark #hourlyContainer .hour-card:hover,
+body.dark #forecastGrid .hour-card:hover {
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+/* Extra info container background */
+body.dark #extraInfo {
+  background: #1a1a1a;
+  color: #ccc;
+  box-shadow: 0 3px 12px rgba(255, 255, 255, 0.05);
+}
+
+/* Extra info cards */
+body.dark #extraInfo > * {
+  background: #222;
+  color: #e5e5e5;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark #hourlyContainer>* {
+  background: #222;
+  color: #e5e5e5;
+  box-shadow: 0 2px 10px rgba(255, 255, 255, 0.05);
+}
+
+body.dark #extraInfo > *:hover {
+  box-shadow: 0 6px 18px rgba(255, 255, 255, 0.08);
+  transform: translateY(-5px);
+}
+
+/* Titles in dark mode */
+body.dark #hourlyForecast h3,
+body.dark #forecastTitle,
+body.dark #extraInfo {
+  color: #f0f0f0;
+}

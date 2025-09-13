@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel | Weather App</title>
+    <link rel="stylesheet" href="/static/admin.css">
+</head>
+
+<body class="light">
+    <div class="theme-toggle">
+        <span id="themeIcon">🌙</span>
+    </div>
+
+    <nav>
+        <div class="left">🌤 Weather App - Admin</div>
+        <div class="right">
+            <a href="/dashboard">User Dashboard</a>
+            <a href="/logout">Logout</a>
+        </div>
+    </nav>
+
+    <main>
+        <h2>User List</h2>
+
+        <!-- Search -->
+        <input type="text" id="searchInput" placeholder="Search users..." class="search-box">
+
+        <div class="table-container">
+            <table id="userTable">
+                <thead>
+                    <tr>
+                        <th data-column="0">Username ⬍</th>
+                        <th data-column="1">Email ⬍</th>
+                        <th data-column="2">City ⬍</th>
+                        <th data-column="3">State ⬍</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {% for u in users %}
+                    <tr>
+                        <td>{{ u[0] }}</td>
+                        <td>{{ u[1] }}</td>
+                        <td>{{ u[2] }}</td>
+                        <td>{{ u[3] }}</td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+        <h3>Total Users: <span id="totalUsers">{{ total }}</span></h3>
+    </main>
+
+    <script>
+        // Theme toggle
+        const themeIcon = document.getElementById("themeIcon");
+        themeIcon.addEventListener("click", () => {
+            document.body.classList.toggle("dark");
+            themeIcon.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
+        });
+
+        // Search functionality
+        const searchInput = document.getElementById("searchInput");
+        searchInput.addEventListener("keyup", () => {
+            const filter = searchInput.value.toLowerCase();
+            const rows = document.querySelectorAll("#userTable tbody tr");
+            let count = 0;
+            rows.forEach(row => {
+                const text = row.textContent.toLowerCase();
+                if (text.includes(filter)) {
+                    row.style.display = "";
+                    count++;
+                } else {
+                    row.style.display = "none";
+                }
+            });
+            document.getElementById("totalUsers").textContent = count;
+        });
+
+        // Sort table columns
+        const table = document.getElementById("userTable");
+        const headers = table.querySelectorAll("th");
+        headers.forEach((header, index) => {
+            header.addEventListener("click", () => {
+                const tbody = table.querySelector("tbody");
+                Array.from(tbody.rows)
+                    .sort((a, b) => a.cells[index].textContent.localeCompare(b.cells[index].textContent))
+                    .forEach(row => tbody.appendChild(row));
+            });
+        });
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,129 @@
+/* Reset & Body */
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.4s ease;
+    background: #f5f5f5;
+    color: #222;
+}
+
+body.dark {
+    background: #121212;
+    color: #eee;
+}
+
+/* Container */
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    font-size: 24px;
+}
+
+/* Login Box */
+.login-box {
+    background: #fff;
+    padding: 40px 30px;
+    border-radius: 16px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+    width: 350px;
+    text-align: center;
+    transition: all 0.4s ease;
+}
+
+body.dark .login-box {
+    background: #1e1e1e;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.1);
+}
+
+.login-box h1 {
+    margin-bottom: 10px;
+    font-size: 28px;
+}
+
+.login-box p {
+    margin-bottom: 30px;
+    font-size: 14px;
+    color: #555;
+}
+
+body.dark .login-box p {
+    color: #aaa;
+}
+
+/* Role Selection */
+.role-select {
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.role-select input {
+    margin-right: 6px;
+}
+
+/* Inputs */
+.login-box input {
+    width: 92%;
+    padding: 12px 15px;
+    margin: 10px 0;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    outline: none;
+    transition: all 0.3s ease;
+}
+
+body.dark .login-box input {
+    background: #2c2c2c;
+    border: 1px solid #555;
+    color: #eee;
+}
+
+.login-box input:focus {
+    border-color: #007bff;
+}
+
+/* Button */
+.login-box button {
+    width: 100%;
+    padding: 12px 15px;
+    margin-top: 20px;
+    background: #007bff;
+    border: none;
+    color: #fff;
+    font-size: 16px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.login-box button:hover {
+    background: #0056b3;
+}
+
+/* Signup Text */
+.signup-text {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.signup-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+body.dark .signup-text a {
+    color: #66aaff;
+}

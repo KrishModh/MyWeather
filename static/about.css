@@ -1,0 +1,101 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9fafc;
+    color: #222;
+    transition: background 0.3s, color 0.3s;
+}
+
+/* Reuse navbar/footer styles from dashboard.css for consistency */
+
+/* Header */
+.about-header {
+    text-align: center;
+    padding: 60px 20px 40px;
+    background: linear-gradient(90deg, #89f7fe, #66a6ff);
+    color: #222;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.about-header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+.about-header p {
+    font-size: 1.2rem;
+    font-style: italic;
+}
+
+/* Main content */
+.about-main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.about-section {
+    margin-bottom: 40px;
+    background: #fff;
+    padding: 30px;
+    border-radius: 18px;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+}
+
+.about-section h2 {
+    margin-bottom: 15px;
+    font-size: 1.8rem;
+    color: #444;
+}
+
+.about-section ul {
+    list-style: disc;
+    margin-left: 20px;
+    line-height: 1.8;
+}
+
+.team-card {
+    text-align: center;
+}
+
+.team-card img {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.team-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.team-card p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: #555;
+}
+
+/* Dark Mode */
+body.dark {
+    background: #121212;
+    color: #e5e5e5;
+}
+
+body.dark .about-header {
+    background: linear-gradient(90deg, #1f1f1f, #2a2a2a);
+    color: #e5e5e5;
+    box-shadow: none;
+}
+
+body.dark .about-section {
+    background: #1e1e1e;
+    color: #e5e5e5;
+    box-shadow: 0 4px 12px rgba(255, 255, 255, 0.05);
+}
+
+body.dark .team-card p {
+    color: #ddd;
+}
