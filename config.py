@@ -1,5 +1,5 @@
-OPENWEATHER_API_KEY = "1d7449f9d13c273e0e2514e226c4fc01"
+OPENWEATHER_API_KEY = "Your_API_Key"
 
-ORACLE_USER = "weather_app"
-ORACLE_PASSWORD = "weather123"
-ORACLE_DSN = "localhost:1521/XEPDB1"
+ORACLE_USER = "Your User_Name"
+ORACLE_PASSWORD = "Your_Password"
+ORACLE_DSN = "Your DNS"  # eg. localhost:1521/XEPDB1
