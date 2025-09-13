@@ -1,4 +1,4 @@
-<img width="2560" height="1440" alt="Screenshot (257)" src="https://github.com/user-attachments/assets/8db47ed7-a753-42bc-863b-5dc6e3b5f8dd" /># 🌤 Weather App with Oracle DB
+# 🌤 Weather App with Oracle DB
 
 A **responsive weather forecasting web application** that allows users to **search for any location** or use their **current location** to view detailed weather information. The app includes **user authentication (login/signup)**,light and dark mode, an **admin dashboard**, and weather details powered by a forecast API. Built with **Oracle Database (local host)** for storing user data.
 ---
