@@ -1,4 +1,4 @@
-# 🌤 Weather App with Oracle DB
+<img width="2560" height="1440" alt="Screenshot (257)" src="https://github.com/user-attachments/assets/8db47ed7-a753-42bc-863b-5dc6e3b5f8dd" /># 🌤 Weather App with Oracle DB
 
 A **responsive weather forecasting web application** that allows users to **search for any location** or use their **current location** to view detailed weather information. The app includes **user authentication (login/signup)**,light and dark mode, an **admin dashboard**, and weather details powered by a forecast API. Built with **Oracle Database (local host)** for storing user data.
 ---
@@ -6,9 +6,9 @@ A **responsive weather forecasting web application** that allows users to **sear
 ## 📸 Preview  
 | Dashboard | Forecast Page | Admin Panel |
 |-----------|---------------|-------------|
-| ![Dashboard]<img width="2560" height="1440" alt="Screenshot (249)" src="https://github.com/user-attachments/assets/8e3d4912-fc3a-4836-b309-c74c851f358c" />
- | ![Forecast]<img width="2560" height="1440" alt="Screenshot (251)" src="https://github.com/user-attachments/assets/4a68a276-c48e-4a1d-b5de-90394cc46bc3" />
- | ![Admin]<img width="2560" height="1440" alt="Screenshot (257)" src="https://github.com/user-attachments/assets/e34987c0-ee40-469b-9390-1941fb75574a" />
+|<img width="2560" height="1440" alt="Screenshot (249)" src="https://github.com/user-attachments/assets/8e3d4912-fc3a-4836-b309-c74c851f358c" />
+ |<img width="2560" height="1440" alt="Screenshot (251)" src="https://github.com/user-attachments/assets/4a68a276-c48e-4a1d-b5de-90394cc46bc3" />
+ |<img width="2560" height="1440" alt="Screenshot (257)" src="https://github.com/user-attachments/assets/e34987c0-ee40-469b-9390-1941fb75574a" />
 
 ---
 
@@ -119,7 +119,7 @@ Add your project-related screenshots here:
 - <img width="2560" height="1440" alt="Screenshot (251)" src="https://github.com/user-attachments/assets/4c583660-53f3-4572-94da-ab32a6e26c47" />
   <img width="2560" height="1440" alt="Screenshot (252)" src="https://github.com/user-attachments/assets/4de6a2fa-08a8-4cdb-a2cb-ff993269c7c8" />
 - **Admin Panel**
-- ![Uploading Screenshot (257).png…]()
+- <img width="2560" height="1440" alt="Screenshot (257)" src="https://github.com/user-attachments/assets/65883d4b-360d-49cd-9d92-7cdda3585177" />
 ---
 
 ## 📊 Future Improvements  
