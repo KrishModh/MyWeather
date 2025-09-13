@@ -41,19 +41,6 @@
             }
         });
 
-        // Default admin credentials
-        document.querySelectorAll("input[name='role']").forEach(radio => {
-            radio.addEventListener("change", () => {
-                if (radio.value === "admin" && radio.checked) {
-                    document.getElementById("email").value = "k456@gmail.com";
-                    document.getElementById("password").value = "123456";
-                } else if (radio.value === "user" && radio.checked) {
-                    document.getElementById("email").value = "";
-                    document.getElementById("password").value = "";
-                }
-            });
-        });
-
     </script>
 </body>
 
