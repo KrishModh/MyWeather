@@ -4,7 +4,7 @@ themeBtn.addEventListener("click", () => {
     themeBtn.textContent = document.body.classList.contains("dark") ? "☀️" : "🌙";
 });
 
-const apiKey = "1d7449f9d13c273e0e2514e226c4fc01"; // Replace
+const apiKey = "Your_API_Key"; // Replace
 
 // Fetch Forecast + Display
 async function fetchForecast(url) {
@@ -94,7 +94,7 @@ async function fetchForecast(url) {
 
         // AQI Fetch for each time slot (using city coordinates once)
         const { lat, lon } = data.city.coord;
-        fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=1d7449f9d13c273e0e2514e226c4fc01`)
+        fetch(`https://api.openweathermap.org/data/2.5/air_pollution?lat=${lat}&lon=${lon}&appid=You_API_Key`)
             .then(res => res.json())
             .then(aqiData => {
                 const aqi = aqiData.list[0].main.aqi;
@@ -123,7 +123,7 @@ async function fetchForecast(url) {
 
     // UV Index
     const uvDiv = document.createElement('div');
-    fetch(`https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=1d7449f9d13c273e0e2514e226c4fc01`)
+    fetch(`https://api.openweathermap.org/data/2.5/uvi?lat=${lat}&lon=${lon}&appid=Your_API_Key`)
         .then(res => res.json())
         .then(uvData => {
             uvDiv.textContent = `UV Index: ${uvData.value}`;
@@ -188,4 +188,5 @@ document.getElementById("forecastLocationBtn").addEventListener("click", () => {
         alert("Geolocation not supported.");
     }
 });
+
 
